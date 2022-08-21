@@ -1,5 +1,7 @@
+import java.util.Scanner;
+
 public class longest_substring {
-    public int lengthOfLongestSubstring(String s) {
+     int lengthOfLongestSubstring(String s) {
         // String str="abcbc";
          int c=0;
          for(int i=0; i<s.length();i++){
@@ -15,16 +17,22 @@ public class longest_substring {
              }
          }
   
-         /
+         
          visited[s.charAt(i)] = false;
              
          }  
          return c;
          
      }
+    
     public static void main(String[] args){
-
+Scanner scn = new Scanner(System.in);
+String s= scn.nextLine();
+longest_substring as= new longest_substring();
+int ans= as.lengthOfLongestSubstring(s);
+System.out.println(ans);
         
           
         
+}
 }
